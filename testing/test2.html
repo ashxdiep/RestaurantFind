@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <title>TEST2</title>
+
+    <style >
+    .map {
+      height: 800px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #right-panel {
+      font-family: 'Roboto','sans-serif';
+      line-height: 30px;
+      padding-left: 10px;
+    }
+
+    #right-panel select, #right-panel input {
+      font-size: 15px;
+    }
+
+    #right-panel select {
+      width: 100%;
+    }
+
+    #right-panel i {
+      font-size: 12px;
+    }
+    #right-panel {
+      height: 100%;
+      float: right;
+      width: 390px;
+      overflow: auto;
+    }
+
+    @media print {
+      #map4 {
+        height: 500px;
+        margin: 0;
+      }
+      #right-panel {
+        float: none;
+        width: auto;
+      }
+    }
+    </style>
+  </head>
+
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <button type="button" name="button" id="testBtn">TEST</button>
+    <br>
+    <div id="map" class="map"></div>
+    <hr>
+
+    <div id="floating-panel">
+    <b>Start: </b>
+    <select id="start">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    <b>End: </b>
+    <select id="end">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    </div>
+    <div id="map2" class="map"></div>
+    <hr>
+
+    <button type="button" name="button" id="testBtn3">TEST AGAIN</button>
+    <input type="text" id="startingPoint" class="directionSearch">
+    <button type="button" name="button" id="goBtn" class="directionSearch">GO</button>
+    <div id="map3" class="map"></div>
+
+    <hr>
+
+    <button type="button" name="button" id="testBtn4">TEST ONCE MORE</button>
+    <input type="text" id="startingPoint4" class="directionSearch">
+    <button type="button" name="button" id="goBtn4" class="directionSearch">GO</button>
+    <div id="right-panel"></div>
+    <div id="map4" class="map"></div>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEylmL-dj2EJ784FZAvrx677Y3Be19sg&callback=callMe"
+  type="text/javascript"></script>
+    <script src="test2.js" type="text/javascript"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  </body>
+
+</html>

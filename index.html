@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Finder</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="parallax-template/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="parallax-template/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="parallax-template/css/test.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'">
+  <!-- <link rel="stylesheet" href="css2/bootstrap.css">
+  <link rel="stylesheet" href="css2/bootstrap-responsive.css">
+  <link rel="stylesheet" href="css2/prettyPhoto.css" /> -->
+  <link rel="stylesheet" href="parallax-template/css2/custom-styles.css">
+<!-- Boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Google map api script  -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEylmL-dj2EJ784FZAvrx677Y3Be19sg&callback=initMap" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Restaurant Finder</h1>
+        <div class="row center">
+          <h2 class="header col s12 light" id="tagline">A website to help you find the best around you</h2>
+        </div>
+        <div class="row center">
+          <a href="index.html#middlenav" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Find Restaurant</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="https://static1.squarespace.com/static/567b15979cadb6554da642d7/569ffe9305f8e24135a6f42e/569ffe9305f8e24135a6f42f/1453326002972/CAFE-EUGENE-886WEB.jpg?format=2500w" alt="Plates of food"></div>
+  </div>
+
+  <!-- search box -->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container" id="middlenav">
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-3">
+        <div class="input-group" align="left">
+          <input type="search" id="mysearch" style="font-size:18px color: #4286f4" placeholder="What to eat?">
+          <span class="input-group-btn">
+      </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+      <div class="col-lg-3">
+        <div class="input-group" align="right">
+          <input type="search" id="citysearch" style="font-size:18px color: #4286f4" placeholder="Enter your city">
+          <span class="input-group-btn">
+        <button class="btn btn-default" id= "searchbtn" type="button">Search!</button>
+      </span>
+        </div>
+      </div>
+      <!-- /.col-lg-6 -->
+    </div>
+  </nav>
+  <!-- map -->
+   <div class="container">
+    <div class="section">
+
+  <div class="row">
+    <div class="parallax-container valign-wrapper" style="float: left">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center" id="map" style=" height: 400px; width: 100%;">
+            <h5 class="header col s12 light">Map PlaceHolder</h5>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"></div>
+    </div>
+  </div>
+    </div>
+   </div>
+
+    <!-- search box -->
+<nav class="white directionSearch" role="navigation">
+    <div class="nav-wrapper container " id = "middlenav">
+      <div class="col-lg-3">
+      </div>
+
+      <div class="col-lg-6">
+        <div class="input-group" align="right">
+          <span class="input-group-btn">
+              <input type="search" id="startingPoint" class="directionSearch" style="font-size:18px color: #4286f4" placeholder="Enter your address- ex:1100 Congress Ave, Austin, TX 78701
+ ">
+              <button type="button" name="button" id="goBtn" class=" btn btn-default directionSearch">GO</button>
+        </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+      <div class="col-lg-3">
+        <div class="input-group" align="right">
+          <span class="input-group-btn">
+        </span>
+        </div>
+      </div>
+      <!-- /.col-lg-6 -->
+    </div>
+  </nav>
+
+
+  <!-- End of middle nav bar-->
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row bbox">
+        <div class="col s12 m4">
+          <div class="icon-block " >
+
+            <h2 class="center brown-text"><i class="material-icons">view_list</i></h2>
+            <h6 class="center">Restaurants Nearby</h6>
+            <div class="light1"></div>
+
+          </div>
+        </div>
+
+        <div class="col s12 m8">
+          <div class="icon-block lol" >
+            <h2 class="center brown-text "><i class="material-icons">group</i></h2>
+            <h5 class="center ">Reviews</h5>
+
+
+          </div>
+          <p class="light oops" id="right-panel"></p>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+      <div class="row recipediv" style = "display: none; margin-left: 100px; margin-right: 50px;">
+        <div class="col s12 center ">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>If You Wanna Stay in Jammies:</h4>
+          <div class="row clearfix rbox">
+              <ul class="gallery-post-grid holder rpics">
+
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="http://c8.alamy.com/comp/DB0NP4/outdoor-cafe-in-rue-de-seine-paris-france-DB0NP4.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h7 class="white-text">Team Bio</h7>
+          <p class="grey-text text-lighten-4">We are a team of fledgling, not-yet calloused developers working on this project like it's our full time job. We love food and trying new places and created this website so you can too. </p>
+        </div>
+        <div class="col l3 s12">
+          <!-- Connect -->
+
+        </div>
+        <div class="col l3 s12">
+          <h8 class="white-text">Connect</h8>
+          <div id = "hello">
+            <li><a class="white-text" href="https://aaronkwalker.github.io/Basic-Portfolio/">Aaron Walker</a></li>
+            <li><a class="white-text" href="https://ashxdiep.github.io/">Ashley Diep</a></li>
+            <li><a class="white-text" href="https://hfrodriguez928.github.io/Bootstrap-Portfolio/">Hayley Rodriguez</a></li>
+            <li><a class="white-text" href="https://sapanaraut.github.io/Bootstrap-Portfolio/">Sapana Raut</a></li>
+            <div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Copyright &copy; 2017 Team Five
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- footer ends -->
+
+
+  <!--  Scripts-->
+
+
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="parallax-template/js/materialize.js"></script>
+  <script src="parallax-template/js/init.js"></script>
+  <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>

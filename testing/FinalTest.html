@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="FinalTest.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <title>Final Test</title>
+  </head>
+
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <button type="button" name="button" id="testBtn">Drop Markers</button>
+
+    <input type="text" id="startingPoint" class="directionSearch">
+    <button type="button" name="button" id="goBtn" class="directionSearch">GO</button>
+
+    <div id="right-panel"></div>
+    <div id="map" class="map"></div>
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEylmL-dj2EJ784FZAvrx677Y3Be19sg&callback=initMap"
+    type="text/javascript"></script>
+    <script src="FinalTest.js" type="text/javascript"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  </body>
+</html>
