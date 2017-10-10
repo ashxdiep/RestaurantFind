@@ -1,0 +1,23 @@
+{
+  "name": "restaurantfind",
+  "version": "1.0.0",
+  "description": "web app that helps you find restaurants nearby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashxdiep/RestaurantFind.git"
+  },
+  "author": "ash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashxdiep/RestaurantFind/issues"
+  },
+  "homepage": "https://github.com/ashxdiep/RestaurantFind#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
